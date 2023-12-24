@@ -27,49 +27,43 @@ let names = ["john", "mac", "petter"];
 let lengths = names.map((name) => name.length);
 console.log(lengths);
 
-let multiplay = (x, y) => 
-  x * y;
+let multiplay = (x, y) => x * y;
 
-let multiplay2=(
-x,
-y
-)=>
-x*y;
+let multiplay2 = (x, y) => x * y;
 
-let setColor = color => ({value: color})
-console.log(setColor("red"))
+let setColor = (color) => ({ value: color });
+console.log(setColor("red"));
 
-
-function Car(){
-  this.speed=0;
-  this.speedUp=function(speed){
-    this.speed=speed;
-    let self=this;
-    setTimeout(function(){
+function Car() {
+  this.speed = 0;
+  this.speedUp = function (speed) {
+    this.speed = speed;
+    let self = this;
+    setTimeout(function () {
       console.log(self.speed);
-    }, 1000)
-  }
+    }, 1000);
+  };
 }
 
-let car= new Car();
+let car = new Car();
 car.speedUp(10);
 
-function Car2(){
-  this.speed=0;
-  this.speedUp=function(speed){
-    this.speed=speed;
-    setTimeout(() => console.log(this.speed), 1000)
-  }
+function Car2() {
+  this.speed = 0;
+  this.speedUp = function (speed) {
+    this.speed = speed;
+    setTimeout(() => console.log(this.speed), 1000);
+  };
 }
 
-let car2= new Car2();
+let car2 = new Car2();
 car2.speedUp(10);
 
-function dump(message){
+function dump(message) {
   console.log(message);
 }
 
-console.log("dump = "+ dump.hasOwnProperty("prototype"));
+console.log("dump = " + dump.hasOwnProperty("prototype"));
 
-let dump2 = message => console.log(message);
-console.log("dump2 = "+ dump2.hasOwnProperty("prototype"));
+let dump2 = (message) => console.log(message);
+console.log("dump2 = " + dump2.hasOwnProperty("prototype"));
